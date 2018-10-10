@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import '../css/App.css';
 import {initInput} from '../util/InitForm'
 import {getStarShips} from '../api'
+import {getDistancePerSupply} from '../methods/'
+
 
 class App extends Component {
 
@@ -10,6 +12,7 @@ class App extends Component {
       super();
       this.state = {
         starShips:[],
+        distance:1,
       }
     }
 
@@ -30,13 +33,25 @@ class App extends Component {
 
   }
 
+  getSupply(MGLT,consumables){
+    const distance = this.state.distance;
+    const distancePerSupply = getDistancePerSupply(MGLT,consumables);
+    return Math.floor(distance/distancePerSupply);
+  }
+
 
     renderStarShips(){
       return this.state.starShips.map((starShip,key)=>(
         <li key={key} className="collection-item"><div><i className="left material-icons blue-grey-text">airplanemode_active</i>
           <span className='starship-name '>{starShip.name}</span>
-        <a href="#!" className="secondary-content blue-grey-text darken-4">435234</a></div></li>
+        <a href="#!" className="secondary-content blue-grey-text darken-4">{this.getSupply(starShip.MGLT,starShip.consumables)}</a></div></li>
       ))
+    }
+
+
+    setDistance(event){
+     const distance = event.target.value;
+     this.setState({distance})
     }
 
 
@@ -44,12 +59,12 @@ class App extends Component {
     return (
       <div className="container">
      <ul className="collection with-header">
-        <li className="collection-header cyan center"><h4>SW Start Ships</h4></li>
+        <li className="collection-header cyan lighten-1 center"><h4>SW Start Ships</h4></li>
         <li>
         <div className="row">
     <div className="input-field col s6">
-      <input autoFocus defaultValue="Alvin" id="first_name2" type="number" className="validate" />
-      <label className="active" htmlFor="first_name2" >Please Enter Distance (MGLT)</label>
+      <input autoFocus defaultValue=""  onChange={this.setDistance.bind(this)} id="distance" type="number" className="validate" />
+      <label className="active" htmlFor="distance" >Please Enter Distance (MGLT)</label>
     </div>
   </div>
 
