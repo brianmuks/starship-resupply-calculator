@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <div className="container">
      <ul className="collection with-header">
-        <li className="collection-header cyan lighten-1 center"><h4>SW Start Ships</h4></li>
+        <li className="collection-header blue-grey lighten-4 center"><h4>SW Start Ships</h4></li>
         <li>
         <div className="row">
     <div className="input-field col s6">
@@ -68,9 +68,12 @@ class App extends Component {
 
         </li>
         <li className="collection-item"><div> Name<a  className="secondary-content"><h6 className='black-text'>Resupply Times</h6></a></div></li>
-
-
         {this.renderStarShips()}
+        <li className="collection-header blue-grey lighten-4 center">
+        <code className=''>
+        <small >SW Start Ships</small>
+        </code>
+          </li>
       </ul>
       </div>
     );
