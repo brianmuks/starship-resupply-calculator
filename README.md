@@ -10,6 +10,7 @@
   - [npm test](#npm-test)
   - [Node](#node)
 - [Making a Progressive Web App](#making-a-progressive-web-app)
+- [Troubleshooting](#making-a-progressive-web-app)
 
 
 ## Folder Structure
