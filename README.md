@@ -14,7 +14,7 @@
 
 ## Folder Structure
 
-After creation, your project should look like this:
+After clone, the project should look like this:
 
 ```
 starship-resupply-calculator/
@@ -42,18 +42,18 @@ If you don't have node, visit: [node](#https://nodejs.org)
 Once installed you wiil be able to use `npm`. You need it anyway :)
 
 ## Why REACT
-Good Question. React is taking over the front-end world. As a developer you want make sure that you and your projects remain relevant. Then you need [REACT](#). 
+Good Question. React is taking over the front-end world. As a Developer you want to make sure that you and your projects remain relevant. Then you need [REACT](#). 
 
-React helps you build apps in less time. How you ask.Well take note of the following advantages
+React helps you build apps in less time. How? You ask.Well take note of the following advantages:
 
-  - The use of reusable, composable
+  - The use of reusable, composable components
   - stateful components
   - Works with tech language that allows you to [test](#https://jestjs.io/) individual componenent. Your Team needs this concepts,so do you!
   - Easy to learn
   -  Manage App lifecycle with easy.
-  - Professionally this app can be built in less than 120 minutes 😮. I know!
+  - Professionally, this app can be built in less than 120 minutes 😮. I know!
   - The syntax looks cool in Visual Studio 😁
-  - When you learn it, add your adavnateges to this list.
+  - When you learn it, add your adavantages to this list.
   - 
 
 
@@ -74,7 +74,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
-Take  note of the terminal output for errors.
+Take note of the terminal output for errors.
 
 
 ## Supported Browsers
@@ -113,9 +113,9 @@ As the comment states, switching `serviceWorker.unregister()` to
 - node command not found
   Please make sure you have node installed. <br />
   Recommended Version : `node v10.4.0`
-- Would you like to run the app on another port instead (y/n):
+- Would you like to run the app on another port instead (y/n):<br/>
   The above message will pop-up when you have another app running on port `:3000`.
-  Type `y` to run the app on a different port. You will probally get `localhost:3002`.
+  Type `y` to run the app on a different port. You will probally get `http://localhost:3002`.
 
 
 
