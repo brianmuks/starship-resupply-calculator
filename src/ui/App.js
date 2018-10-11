@@ -1,11 +1,10 @@
 
 import React, { Component } from 'react';
 import '../css/App.css';
-import {initInput} from '../util/InitForm'
 import {getStarShips} from '../api'
-import {getDistancePerSupply} from '../methods/'
+import {getDistancePerSupply} from '../methods'
 
-
+//
 class App extends Component {
 
     constructor(){
@@ -17,7 +16,6 @@ class App extends Component {
     }
 
   componentDidMount(){
-    initInput();
     getStarShips()
           .then((response)=>{
             console.log(response.results[0].name)
@@ -35,8 +33,8 @@ class App extends Component {
 
   getSupply(MGLT,consumables){
     const distance = this.state.distance;
-    const distancePerSupply = getDistancePerSupply(MGLT,consumables);
-    return Math.floor(distance/distancePerSupply);
+    const resupply = getDistancePerSupply(MGLT,consumables,distance);
+    return resupply;
   }
 
 

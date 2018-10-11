@@ -8,9 +8,11 @@ const HOURS_IN_DAY = 24;
 
 
 //
-export const getDistancePerSupply = (MGLT,consumables)=>{
+export const getDistancePerSupply = (MGLT,consumables,distance)=>{
     const consumableHours = getConsumableHours(consumables);
-    return Math.floor(consumableHours*MGLT);
+    distance = parseInt(distance);//make sure input is int
+    const distancePerSupply =  Math.floor(consumableHours*MGLT);
+    return Math.floor(distance/distancePerSupply);
 }
 
 //return consumables in hours
@@ -62,7 +64,6 @@ export const sanitizeConsumable = (consumables)=>{
     const count = consumables.match(numberPattern);
     const unit = consumables.match(letterPattern);
 
-    console.log(count[0],unit[0]);
 
     return [count[0],unit[0]];
 }
