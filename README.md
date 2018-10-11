@@ -117,7 +117,7 @@ As the comment states, switching `serviceWorker.unregister()` to
 - Would you like to run the app on another port instead (y/n):<br/>
   The above message will pop-up when you have another app running on port `:3000`.
   Type `y` to run the app on a different port. You will probally get `http://localhost:3002`.
-
+- When the app load and no content is diplayed, please visit [swapi](#https://swapi.co/). If the server is down then try some other times. All start ships are loaded from that site.
 
 
 
