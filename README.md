@@ -1,17 +1,19 @@
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 
 ## Table of Contents
 
-- [Updating to New Releases](#updating-to-new-releases)
 
+- [Dependencies](#dependencies)
+- [Why REACT](#why-react)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [Node](#node)
-  - [Testing Components](#testing-components)
 - [Making a Progressive Web App](#making-a-progressive-web-app)
 
 
@@ -39,17 +41,25 @@ starship-resupply-calculator/
     
 ```
 
-For the project to build, **these files must exist with exact filenames**:
+## Dependencies
+`nodejs` | Recommended version `node v10.4.0`.
+If you don't have node, visit: [node](#https://nodejs.org) 
+Once installed you wiil be able to use `npm`. You need it anyway :)
 
-- `public/index.html` is the page template;
-- `src/index.js` is the JavaScript entry point.
+## Why REACT
+Good Question. React is taking over the front-end world. As a developer you want make sure that you and your projects remain relevant. Then you need [REACT](#). 
 
-You can delete or rename the other files.
+React helps you build apps in less time. How you ask.Well take note of the following advantages
 
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
-You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
-
-Only files inside `public` can be used from `public/index.html`.<br>
+  - The use of reusable, composable
+  - stateful components
+  - Works with tech language that allows you to [test](#https://jestjs.io/) individual componenent. Your Team needs this concepts,so do you!
+  - Easy to learn
+  -  Manage App lifecycle with easy.
+  - Professionally this app can be built in less than 120 minutes 😮. I know!
+  - The syntax looks cool in Visual Studio 😁
+  - When you learn it, add your adavnateges to this list.
+  - 
 
 
 ## Available Scripts
@@ -66,12 +76,10 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
-
+Take  note of the terminal output for errors.
 
 
 ## Supported Browsers
@@ -80,45 +88,6 @@ By default, the generated project supports all modern browsers.<br>
 Support for Internet Explorer 9, 10, and 11 requires [polyfills](https://github.com/facebook/create-react-app/blob/master/packages/react-app-polyfill/README.md).
 
 
-
-
-
-### Writing Tests
-
-To create tests, add `it()` (or `test()`) blocks with the name of the test and its code. You may optionally wrap them in `describe()` blocks for logical grouping but this is neither required nor recommended.
-
-Jest provides a built-in `expect()` global function for making assertions. A basic test could look like this:
-
-```js
-import sum from './sum';
-
-it('sums numbers', () => {
-  expect(sum(1, 2)).toEqual(3);
-  expect(sum(2, 2)).toEqual(4);
-});
-```
-
-All `expect()` matchers supported by Jest are [extensively documented here](https://facebook.github.io/jest/docs/en/expect.html#content).<br>
-You can also use [`jest.fn()` and `expect(fn).toBeCalled()`](https://facebook.github.io/jest/docs/en/expect.html#tohavebeencalled) to create “spies” or mock functions.
-
-### Testing Components
-
-There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the output, to full rendering and testing component lifecycle and state changes.
-
-Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
-
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-});
-```
-
-This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot of value with very little effort so they are great as a starting point, and this is the test you will find in `src/App.test.js`.
 
 
 ## Making a Progressive Web App
